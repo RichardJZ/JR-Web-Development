@@ -1011,7 +1011,7 @@ font-size:34px;
 .wrapper-top-row{
 
 position:fixed;
-background-color:rgba(135,135,135,.5);
+background-image:linear-gradient(to bottom, rgba(30,30,30,.8), white);
 width:100%;
 height:70px;
 
