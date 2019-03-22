@@ -482,6 +482,8 @@ position:absolute;
 figure{
 
 position:relative;
+with:90%;
+margin: 0 auto;
 
 }
 
@@ -1036,3 +1038,63 @@ strong.dest{
 	text-shadow:.5px .5px 1px #000000;
 
 }
+
+.headerback{
+	background-image: url(../img/headerback.jpg);
+
+}
+
+.mixtape{
+	background-image:url(../img/mixtape.png);
+}
+
+.menshair{
+	background-image:url(../img/menshair.png);
+}
+
+.risotto{
+	background-image:url(../img/risotto.png);
+}
+
+.travel{
+	background-image:url(../img/travel.png);
+}
+
+.demo-websites{
+	background-color:rgba(200,200,200,.3);
+
+
+}
+
+
+ #theImage {
+        width: 100%;
+        height: auto;
+    }
+    #container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+
+@media (max-width:500px){
+	.headerback{
+	background-image: url(../img/interior-deco-rd.png);}
+
+	.mixtape{
+	background-image: url(../img/mixtape-rd.png);
+	width:100%;
+	height:auto;
+	}
+	.risotto{
+	background-image: url(../img/risotto-rd.png);
+	}
+	.travel{
+	background-image: url(../img/travel-rd.png);
+	}
+	.menshair{
+	background-image: url(../img/menshair-rd.png);
+	}
+
+}
+
