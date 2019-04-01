@@ -370,10 +370,14 @@ background-color:transparent;
 */
 
 
+.wrapper-title{
+	display:none;
+}
 
 section p{
-  margin:20px 15px;
-  font-size:1rem;
+  margin:0;
+  font-size:0.85rem;
+	padding:0;
 
 
 }
@@ -548,7 +552,7 @@ margin: 0 auto;
 
 @media (max-width: 1000px) {
   .contact form input {
-    flex-basis: 100%;
+    flex-basis: 80%;
     margin: 0 0 20px 0; } }
 
 /*Footer Section*/
@@ -664,7 +668,8 @@ footer p {
   height: auto; }
 
 .hero {
-  border-bottom: 10px solid #778;
+  border-bottom: 10px solid;
+	border-bottom-color: linear-gradient(to top, white, rgba(119,119,136,.5)) 30 stretch;
   
  }
 
@@ -1082,6 +1087,10 @@ strong.dest{
 
 
 @media (max-width:500px){
+
+	.contact form{
+	width:80%;
+	}
 	.headerback{
 	background-image: url(../img/interior-deco-rd.png);}
 
@@ -1102,3 +1111,12 @@ strong.dest{
 
 }
 
+div.mobile-menu-span{
+	display:flex;
+	justify-content: center;
+
+}
+
+a{
+	outline:0;
+}
