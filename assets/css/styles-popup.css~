@@ -11,11 +11,15 @@
     --color-grey-light-2: #f4f2f2;
     --color-grey-light-3: #f0eeee;
     --color-grey-light-4: #ccc;
+    --color-grey-light-5: #778;
+    --color-grey-light-6: rgba(0,0,0,.4);
+
     
     --color-grey-dark-1: #333;
     --color-grey-dark-2: #777;
     --color-grey-dark-3: #999;
     --color-grey-dark-0:rgba(36, 36, 28, 0.8);
+    --color-grey-dark-4:rgb(154, 160, 186);
 
     --color-brown-light-1: rgb(213, 149, 65);
 
@@ -73,7 +77,7 @@ a.btn {
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
-  background-color: #3f51b5;
+  background-color: var(--color-grey-light-6);
   opacity: 1; 
   text-decoration:none;
   color:var(--color-grey-light-1);
@@ -108,7 +112,7 @@ section.packages{
 hr {
   width: 250px;
   height: 3px;
-  background-color: #3f51b5;
+  background-color:var(--color-grey-light-5);
   border: 0;
   margin: 50px auto; }
 
@@ -117,23 +121,25 @@ section h3.title {
   font: 32px "Roboto", sans-serif;
   margin-bottom: 30px;
   text-align: center;
-  color: blue;
-  font-weight: 100; }
+  color:var(--color-grey-dark-1);
+  font-weight: 100;
+  text-transform:uppercase;
+ }
 
 section h3.title strong.dest{
-  color:blue;
+  color:var(--color-grey-dark-1);
   font-weight: 700; 
 
 }
 
 section p{
-color:var(--color-brown-light-1);
-font-size:1.25rem;
+color:var(--color-grey-dark-1);
+font-size:1rem;
 }
 
 section p {
   max-width: 775px;
-  line-height: 2;
+  line-height: 1.75;
   padding: 0 20px;
   margin-bottom: 30px;
   text-align: center; }
@@ -158,7 +164,7 @@ header {
 }
 
 header h2 {
-  font-family: "Quicksand", sans-serif; }
+  font-family: "Roboto", sans-serif; }
 /*
 header nav {
   display: flex;
@@ -196,8 +202,11 @@ header nav li {
    }
 
 .hero h1 {
-  font: bold 60px "Open Sans", sans-serif;
-  margin-bottom: 15px; }
+  font: bold 2rem "Roboto", sans-serif;
+  margin-bottom: 15px;
+  text-transform:uppercase;
+
+ }
 
 .hero h3 {
   font: normal 28px "Open Sans", sans-serif;
@@ -297,12 +306,16 @@ header nav li {
 
 
 .destinations .grid li {
-  height: 400px;
+  height: 550px;
   
   background-clip: content-box;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
-  list-style: none; }
+  list-style: none;
+
+  background-repeat:no-repeat;
+
+ }
 
 .destinations .grid .wrapper-img-overlay-text{
   flex-basis: 36%;
@@ -357,10 +370,14 @@ background-color:transparent;
 */
 
 
+.wrapper-title{
+	display:none;
+}
 
 section p{
-  margin:20px 15px;
-  font-size:1rem;
+  margin:0;
+  font-size:0.85rem;
+	padding:0;
 
 
 }
@@ -473,6 +490,8 @@ position:absolute;
 figure{
 
 position:relative;
+with:90%;
+margin: 0 auto;
 
 }
 
@@ -533,7 +552,7 @@ position:relative;
 
 @media (max-width: 1000px) {
   .contact form input {
-    flex-basis: 100%;
+    flex-basis: 80%;
     margin: 0 0 20px 0; } }
 
 /*Footer Section*/
@@ -649,7 +668,10 @@ footer p {
   height: auto; }
 
 .hero {
-  border-bottom: 10px solid #3f51b5; }
+  border-bottom: 10px solid;
+	border-bottom-color: linear-gradient(to top, white, rgba(119,119,136,.5)) 30 stretch;
+  
+ }
 
 /* mixins  */
 
@@ -750,7 +772,7 @@ nav li {
   height: 50px;
   text-align: center;
   line-height: 50px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   color: #fff;
   opacity:0.9;
 
@@ -783,7 +805,7 @@ list-style:none;
 
 /*Style 'show menu' label button and hide it by default*/
 .show-menu {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   text-decoration: none;
   color: #fff;
   background: var(--color-primary-blue-1);
@@ -885,7 +907,7 @@ margin-bottom:0;
   height: 50px;
  
   line-height: 50px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
   color: #fff;
   opacity:0.9;
   
@@ -923,4 +945,178 @@ display:none;
 font-size:34px;
 
   }
+}
+
+
+/* overlay menu  */
+
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-image: url(./images/backround.jpg);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+.wrapper-top-row{
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+	
+	padding:15px;
+	z-index:1;
+
+}
+
+
+
+.wrapper-fixed-bar{
+	position:relative;
+
+
+}
+
+.wrapper-top-row{
+
+position:fixed;
+background-image:linear-gradient(to bottom, rgba(30,30,30,.8), white);
+width:100%;
+height:70px;
+
+}
+
+.wrapper-text-on-card{
+	background:rgba(248,248,248,0.5);
+	padding:25px;
+	border-radius:3px;
+	box-shadow:1px 1px 3px #000000;
+	transition: all .2s;
+
+}
+
+.wrapper-text-on-card:hover{
+box-shadow:2px 2px 5px #000000;
+background:rgba(244,244,244,0.5);
+
+
+}
+strong.dest{
+	text-shadow:.5px .5px 1px #000000;
+
+}
+
+.headerback{
+	background-image: url(../img/headerback.jpg);
+
+}
+
+.mixtape{
+	background-image:url(../img/mixtape.png);
+}
+
+.menshair{
+	background-image:url(../img/menshair.png);
+}
+
+.risotto{
+	background-image:url(../img/risotto.png);
+}
+
+.travel{
+	background-image:url(../img/travel.png);
+}
+
+.demo-websites{
+	background-color:rgba(200,200,200,.3);
+
+
+}
+
+
+ #theImage {
+        width: 100%;
+        height: auto;
+    }
+    #container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+
+@media (max-width:500px){
+
+	.contact form{
+	width:80%;
+	}
+	.headerback{
+	background-image: url(../img/interior-deco-rd.png);}
+
+	.mixtape{
+	background-image: url(../img/mixtape-rd.png);
+	width:100%;
+	height:auto;
+	}
+	.risotto{
+	background-image: url(../img/risotto-rd.png);
+	}
+	.travel{
+	background-image: url(../img/travel-rd.png);
+	}
+	.menshair{
+	background-image: url(../img/menshair-rd.png);
+	}
+
+}
+
+div.mobile-menu-span{
+	display:flex;
+	justify-content: center;
+
+}
+
+a{
+	outline:0;
 }
